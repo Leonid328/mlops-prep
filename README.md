@@ -2,6 +2,22 @@
 
 Three checks: Docker, Compose + Redis, k3s. No ML.
 
+## Screenshots
+
+Terminal logs for the three tasks (open this section, not the raw png):
+
+### Task 1
+
+![task1 curl health and echo](logs/task1-curl.png)
+
+### Task 2
+
+![task2 increment 1 2 3](logs/task2-curl.png)
+
+### Task 3
+
+![task3 kubectl pods and health](logs/task3-k8s.png)
+
 ## Task 1
 
 ```bash
