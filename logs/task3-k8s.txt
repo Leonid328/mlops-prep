@@ -1,0 +1,13 @@
+=== TASK3 k3s ===
+$ k3s kubectl get pods
+NAME                          READY   STATUS    RESTARTS   AGE
+prep-task1-865974f665-9lc9h   1/1     Running   0          142m
+prep-task1-865974f665-jntgc   1/1     Running   0          141m
+prep-task1-865974f665-pfkt6   1/1     Running   0          141m
+$ curl -s http://127.0.0.1:30080/health  (x5)
+{"status":"ok","instance_id":"prep-task1-865974f665-jntgc"}
+{"status":"ok","instance_id":"prep-task1-865974f665-9lc9h"}
+{"status":"ok","instance_id":"prep-task1-865974f665-jntgc"}
+{"status":"ok","instance_id":"prep-task1-865974f665-pfkt6"}
+{"status":"ok","instance_id":"prep-task1-865974f665-jntgc"}
+scale 1 then 3 ok; delete pod -> replacement prep-task1-865974f665-pfkt6
